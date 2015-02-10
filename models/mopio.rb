@@ -26,6 +26,7 @@ Model.new(:mopio, "Database backup") do
     s3.secret_access_key = ENV["AWS_SECRET_ACCESS_KEY"]
     s3.region            = ENV["AWS_REGION"]
     s3.bucket            = ENV["S3_BUCKET_NAME"]
+    s3.path              = ""
     s3.chunk_size        = 10 # MiB
     s3.encryption        = :aes256
   end
